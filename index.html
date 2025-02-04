@@ -5,34 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drag and Drop</title>
     <link rel="stylesheet" href="./style/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="container">
-        <div class="sortableList">
-            <h1>Sortable List</h1>
-            <div class="items">
-                <div class="item" draggable="true">
-                    <div class="icon">#</div>
-                    <div class="content">
-                        <h2>
-                            List Item1
-                        </h2>
-                        <p>
-                            Description of the fourth item in the list.
-                        </p>
-                    </div>
-                </div>
-                <div class="item" draggable="true">
-                    <div class="icon">#</div>
-                    <div class="content">
-                        <h2>
-                            List Item2
-                        </h2>
-                        <p>
-                            Description of the fourth item in the list.
-                        </p>
-                    </div>
-                </div>
+        <div class="sortableList">  
+            <div class="dragPart">
+                <h1>Sortable List</h1>
+                <ul class="items" id="leftPart" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <li class="item" draggable="true" ondragstart="drag(event)" id="item1">
+                        <i class="fa fa-th"></i>
+                        <div class="content">
+                            <h2>
+                                List Item1
+                            </h2>
+                            <p>
+                                Description of the fourth item in the list.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="item" draggable="true" ondragstart="drag(event)" id="item2">
+                        <i class="fa fa-th"></i>
+                        <div class="content">
+                            <h2>
+                                List Item2
+                            </h2>
+                            <p>
+                                Description of the fourth item in the list.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="item" draggable="true" ondragstart="drag(event)" id="item3">
+                        <i class="fa fa-th"></i>
+                        <div class="content">
+                            <h2>
+                                List Item3
+                            </h2>
+                            <p>
+                                Description of the fourth item in the list.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="item" draggable="true" ondragstart="drag(event)" id="item4">
+                        <i class="fa fa-th"></i>
+                        <div class="content">
+                            <h2>
+                                List Item4
+                            </h2>
+                            <p>
+                                Description of the fourth item in the list.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropPart">
+                <h1>Sortable List</h1>
+                <ul class="items" id="#rightPart" ondrop="drop(event)" ondragover="allowDrop(event)">
+                </ul>
             </div>
         </div>
     </div>
